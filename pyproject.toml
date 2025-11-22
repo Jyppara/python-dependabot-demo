@@ -1,0 +1,22 @@
+[project]
+name = "datatoolsdemo"
+version = "0.0.1"
+authors = [
+  { name="Jyri Määttä", email="jyppara@gmail.com" },
+]
+description = "A small demo package to practice Dependabot."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license-files = ["LICEN[CS]E*"]
+
+dependencies = [
+    "requests",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "loguru",
+]
