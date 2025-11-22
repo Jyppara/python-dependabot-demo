@@ -6,7 +6,7 @@ authors = [
 ]
 description = "A small demo package to practice Dependabot."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11,<4.0"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
@@ -14,9 +14,14 @@ classifiers = [
 license-files = ["LICEN[CS]E*"]
 
 dependencies = [
-    "requests",
-    "pandas",
-    "numpy",
-    "matplotlib",
-    "loguru",
+    "requests (>=2.32.5,<3.0.0)",
+    "pandas (>=2.3.3,<3.0.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+    "matplotlib (>=3.10.7,<4.0.0)",
+    "numpy (>=2.3.5,<3.0.0)"
+]
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.1,<10.0.0)"
 ]
