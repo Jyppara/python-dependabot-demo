@@ -1,6 +1,17 @@
-python-datatools-demo
+python-dependabot-demo
 
-This project is a simple practice Python package designed to experiment with
-dependency management and Dependabot in a realistic development setting.
-The source code and test suite are AI-generated to provide example structure,
-packaging, and multiple external dependencies for update automation.
+This repository is a lightweight practice project for experimenting with a  Python development workflow.
+The goal is to demonstrate how dependency management, automated releases, and CI pipelines work together in a realistic setup.
+
+The project includes:
+
+- A Python package (AI-generated code: simple data utilities + tests)
+- Poetry for dependency management and packaging
+- Dependabot for automatic dependency update pull requests
+- A CI pipeline (GitHub Actions) that:
+    - runs tests on every branch
+    - builds and publishes the package to PyPI when changes are merged into main
+- Automatic version tagging and GitHub Releases on every successful publish
+- A fully working PyPI release flow
+
+All source code and tests were generated using AI to serve as a clean and minimal example of how to structure a Python package with automated tooling.
