@@ -26,12 +26,12 @@ jobs:
       # 3) Install Poetry
       - name: Install Poetry
         run: |
-          pip install poetry --with dev
+          pip install poetry
 
       # 4) Install dependencies using Poetry
       - name: Install dependencies
         run: |
-          poetry install --no-interaction --no-ansi
+          poetry install --no-interaction --no-ansi --with dev
 
       # 5) Run tests
       - name: Run tests
