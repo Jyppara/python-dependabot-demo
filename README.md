@@ -1,4 +1,4 @@
-python-dependabot-demo
+# python-dependabot-demo
 
 This repository is a lightweight practice project for experimenting with a  Python development workflow.
 The goal is to demonstrate how dependency management, automated releases, and CI pipelines work together in a realistic setup.
