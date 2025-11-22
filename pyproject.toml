@@ -1,6 +1,6 @@
 [project]
 name = "datatoolsdemo"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Jyri Määttä", email="jyppara@gmail.com" },
 ]
@@ -20,6 +20,10 @@ dependencies = [
     "matplotlib (>=3.10.7,<4.0.0)",
     "numpy (>=2.3.5,<3.0.0)"
 ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
