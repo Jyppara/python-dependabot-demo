@@ -38,6 +38,7 @@ def test_fetch_json_success(monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify that fetch_json returns parsed JSON on successful response."""
 
     def fake_get(url: str, timeout: int = 5) -> DummyResponse:  # type: ignore[override]
+        _ = timeout  # prevents raising a dead code error
         assert url == "https://example.com/api"
         return DummyResponse({"message": "ok"}, status_code=200)
 
@@ -51,7 +52,7 @@ def test_fetch_json_success(monkeypatch: pytest.MonkeyPatch) -> None:
 def test_fetch_json_http_error(monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify that fetch_json raises RuntimeError if the HTTP request fails."""
 
-    def fake_get(url: str, timeout: int = 5) -> DummyResponse:  # type: ignore[override]
+    def fake_get(_url: str, _timeout: int = 5) -> DummyResponse:  # type: ignore[override]
         return DummyResponse({"error": "broken"}, status_code=500)
 
     monkeypatch.setattr("datatoolsdemo.fetch.requests.get", fake_get)
@@ -66,7 +67,7 @@ def test_fetch_json_exception(monkeypatch: pytest.MonkeyPatch) -> None:
     RuntimeError, keeping the public API consistent.
     """
 
-    def fake_get(url: str, timeout: int = 5) -> Any:  # type: ignore[override]
+    def fake_get(_url: str, _timeout: int = 5) -> Any:  # type: ignore[override]
         raise TimeoutError("Network down")
 
     monkeypatch.setattr("datatoolsdemo.fetch.requests.get", fake_get)
