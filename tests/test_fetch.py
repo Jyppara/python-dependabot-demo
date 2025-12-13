@@ -37,7 +37,8 @@ class DummyResponse:
 def test_fetch_json_success(monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify that fetch_json returns parsed JSON on successful response."""
 
-    def fake_get(url: str, _timeout: int = 5) -> DummyResponse:  # type: ignore[override]
+    def fake_get(url: str, timeout: int = 5) -> DummyResponse:  # type: ignore[override]
+        _ = timeout  # prevents raising a dead code error
         assert url == "https://example.com/api"
         return DummyResponse({"message": "ok"}, status_code=200)
 
