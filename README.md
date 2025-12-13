@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/Jyppara/python-dependabot-demo/badge.svg?branch=feature/add-coveralls)](https://coveralls.io/github/Jyppara/python-dependabot-demo?branch=feature/add-coveralls)
+
 # python-dependabot-demo
 
 This repository is a lightweight practice project for experimenting with a  Python development workflow.
