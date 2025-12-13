@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/Jyppara/python-dependabot-demo/badge.svg?branch=feature/add-coveralls)](https://coveralls.io/github/Jyppara/python-dependabot-demo?branch=feature/add-coveralls)
+[![PyPI](https://img.shields.io/pypi/v/datatoolsdemo)](https://pypi.org/project/datatoolsdemo/)
 
 # python-dependabot-demo
 
