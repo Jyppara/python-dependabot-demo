@@ -1,6 +1,6 @@
 [project]
 name = "datatoolsdemo"
-version = "0.0.6"
+version = "0.0.7"
 authors = [
   { name="Jyri Määttä", email="jyppara@gmail.com" },
 ]
@@ -28,5 +28,6 @@ build-backend = "poetry.core.masonry.api"
 [dependency-groups]
 dev = [
     "pytest (>=9.0.1,<9.1.0)",
-    "vulture (>=2.14,<2.15)"
+    "vulture (>=2.14,<2.15)",
+    "pytest-cov (>=7.0.0,<7.1.0)",
 ]
