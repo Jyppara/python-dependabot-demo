@@ -18,7 +18,7 @@ dependencies = [
     "pandas (>=2.3.3,<2.4.0)",
     "loguru (>=0.7.3,<0.8.0)",
     "matplotlib (>=3.10.7,<3.11.0)",
-    "numpy (>=2.3.5,<2.4.0)"
+    "numpy (>=2.3.5,<2.4.0)",
 ]
 
 [build-system]
@@ -27,5 +27,6 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "pytest (>=9.0.1,<9.1.0)"
+    "pytest (>=9.0.1,<9.1.0)",
+    "vulture (>=2.14,<2.15)"
 ]

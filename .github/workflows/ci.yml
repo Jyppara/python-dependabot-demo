@@ -13,27 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Check out the repository code
+      # Check out the repository code
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2) Set up Python
+      # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3) Install Poetry
+      # Install Poetry
       - name: Install Poetry
         run: |
           pip install poetry
 
-      # 4) Install dependencies using Poetry
+      # Install dependencies using Poetry
       - name: Install dependencies
         run: |
           poetry install --no-interaction --no-ansi --with dev
 
-      # 5) Run tests
+      # Run vulture
+      - name: Check dead code
+        run: |
+          poetry run vulture src --min-confidence 100
+          poetry run vulture tests --min-confidence 100
+
+      # Run tests
       - name: Run tests
         run: |
           poetry run pytest -q
